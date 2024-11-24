@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.topnav {
+overflow: hidden;
+background-color: lightgray;
+}
+
+.topnav a {
+float: left;
+display: block;
+color: black;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.topnav a:hover {
+background-color: white;
+color: black;
+}
+
+.topnav a.active {
+background-color: gray;
+color: black;
+}
+
+.topnav .icon {
+display: none;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {  
+padding-top: 20px; 
+padding-right: 10px;
+padding-bottom: 20px;
+padding-left: 20px;
+float: left;
+width: 70%;
+background-color: #f1f1f1;
+}
+
+/* Right column */
+.rightcolumn {
+padding-top: 20px;
+padding-left: 10px;
+padding-bottom: 20px;
+padding-right: 20px;
+float: left;
+width: 30%;
+background-color: #f1f1f1;
+}
+
+/* Add a card effect for articles */
+.card {
+background-color: white;
+padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Footer */
+.footer {
+padding: 20px;
+text-align: center;
+background: #ddd;
+margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+.topnav a:not(:first-child) {display: none;}
+.topnav a.icon {
+    float: right;
+    display: block;
+}
+}
+
+@media screen and (max-width: 600px) {
+.topnav.responsive {position: relative;}
+.topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+}
+}
+
+* {
+box-sizing: border-box;
+}
+  
+body {
+font-family: Georgia, serif;;
+padding: 10px;
+background: linear-gradient(to bottom right, #99ccff 27%, #ffcccc 100%);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+
+/* Header/Blog Title */
+.header {
+padding: 30px;
+text-align: center;
+}
+
+h1 {
+text-align: center;
+font-size: 50px;
+font-family: Georgia, serif;
+}
+
+.header h1 {
+font-size: 50px;
+font-family: Georgia, serif;
+}
+
+table{
+    width: 80%;
+    margin: 40px auto;
+    background: white;
+    color: black;
+}
+
+table.list{
+    text-align: center;
+    width: 100%;
+}
+
+td{
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px 15px;
+}
+
+tr:nth-child(even), table.list thread> tr{
+    background-color: white;
+}
+
+input[type="text"],input[type="number"]{
+    width:91%;
+    padding:12px 20px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input[type="submit"],input[type="reset"]{
+    background: lightgray;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    background: lightblue;
+}
+
+input[type="reset"]:hover{
+    background: lightblue;
+}
+
+button{
+    background: lightgray;
+    color: black;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover{
+    background: gray;
+}
+
+
+.othercolumn {
+float: left;
+width: 33.3%;
+margin-bottom: 16px;
+padding: 0 8px;
+}
+
+.aboutcolumn {
+float: left;
+width: 50%;
+padding: 0 8px;
+}
+
+.buttoncolumn {
+margin: auto;
+width: 100%;
+margin-bottom: 16px;
+padding: 0 8px;
+}
+
+.about_card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+margin: 8px;
+}
+
+.about-section {
+padding-top: 20px;
+text-align: center;
+background-image:url("beach3.jxl");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+color: black;
+width: 100%;
+padding-bottom: 0;
+}
+
+.container {
+padding-top: 10px;
+padding: 0 16px;
+background-color: white;
+}
+
+.container::after, .row::after {
+content: "";
+clear: both;
+display: table;
+}
+
+.title {
+color: grey;
+}
+
+a.button {
+padding: 1px 6px;
+border: 1px outset buttonborder;
+border-radius: 3px;
+color: black;
+background-color: lightgray;
+text-decoration: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+.grid-item {
+background-color: rgba(255, 255, 255, 0.8);
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 20px;
+font-size: 30px;
+text-align: center;
+}

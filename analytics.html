@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">  
+  <title>DATA-ANALYTICS</title>
+</head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a href="index.html">Home Page</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="analytics.html" class="active">Analytics</a>
+    <a href="crud.html">Subscribe</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <p style="color: gray; float: right; padding-right: 20px;"><b><i>Subscribe to our weekly newsletter for updates on latest travel prices, vacation statisics, and package deals!</i></b></p>
+  </div>
+
+  <h1 style="text-align:center;"><i>2022-2024 Vacation Analytics for US Residents</i></h1>
+
+  <div class="grid-container">
+    <div class="grid-item"><canvas id="barChart" style="max-width:550px; background-color: white; padding: 0; margin: auto; display: block;"></canvas></div>
+    <div class="grid-item"><canvas id="line-chart" style="max-width:550px; background-color: white; padding: 0; margin: auto; display: block"></canvas></div>  
+    <div class="grid-item"><canvas id="line-chart2" style="max-width:550px; background-color: white; padding: 0; margin: auto; display: block;"></canvas></div>
+    <div class="grid-item"><canvas id="horizontal-bar-chart" style="max-width:550px; background-color: white; padding: 0; margin: auto; display: block"></canvas></div>  
+  </div>
+
+<script>
+var barColors = ["#3e95cd","#8e5ea2","#3cba9f","#e8c3b9","#c45850"];
+
+
+new Chart("barChart", {
+  type: "bar",
+  data: {
+    labels: ["Single Person", "Couple", "Family of Four", "Family of Five"],
+    datasets: [{
+      backgroundColor: barColors,
+      data: [1984, 3969, 7936, 11904]
+    }]
+  },
+  options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "2024 Average Vacation Price (in US $)"
+    }
+  }
+});
+
+new Chart(document.getElementById("horizontal-bar-chart"), {
+  type: "bar",
+  data: {
+    labels: ['Restaurants', 'Airlines', 'Lodging'],
+    datasets: [{
+      backgroundColor: barColors,
+      data: [14, 16, 43]
+    }]
+  },
+  options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Average US Travel Spend Increass from 2022 to 2023 (in %)"
+    }
+  }
+});
+
+new Chart(document.getElementById("line-chart"), {
+  type: 'line',
+  data: {
+    labels: [2019, 2020, 2021, 2022],
+    datasets: [{ 
+        data: [5.9, 5.6, 15, 13],
+        label: "Hopper",
+        borderColor: "#3cba9f",
+        fill: false
+      }, { 
+        data: [7.6, 6.9, 9, 16.9],
+        label: "Expedia",
+        borderColor: "#e8c3b9",
+        fill: false
+      }, { 
+        data: [12.1, 13.1, 12.5, 14],
+        label: "AirBnB",
+        borderColor: "#8e5ea2",
+        fill: false
+      }, { 
+        data: [8, 8.2, 11.5, 17.2],
+        label: "Booking.com",
+        borderColor: "#3e95cd",
+        fill: false
+      }, { 
+        data: [4.5, 10, 10.5, 17.3],
+        label: "VRBO",
+        borderColor: "#c45850",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    title: {
+      display: true,
+      text: 'US Travel Booking App Downloads (in millions)'
+    }
+  }
+});
+
+new Chart(document.getElementById("line-chart2"), {
+  type: 'line',
+  data: {
+    labels: [2019, 2020, 2021, 2022, 2023, 2024],
+    datasets: [{ 
+        data: [243, 265, 298, 314, 321, 326],
+        label: "United-States",
+        borderColor: "#3e95cd",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    title: {
+      display: true,
+      text: 'Average Daily Rate of US Short-Term Rental Property (in dollars)'
+    }
+  }
+});
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
